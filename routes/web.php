@@ -16,3 +16,5 @@ Route::get('/soma/{num1}/{num2}', [ExercicioController::class ,'soma']);
 Route::get('/sub/{num1}/{num2}',[ExercicioController::class, 'sub']);
 
 Route::get('/div/{num1}/{num2}',[ExercicioController::class, 'divError']);
+
+Route::get('/mult/{num1}/{num2}',[ExercicioController::class, 'multWarning']);

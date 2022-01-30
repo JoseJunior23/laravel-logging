@@ -30,4 +30,14 @@ class ExercicioController extends Controller
         }
     }
 
+    public function multWarning($num1, $num2){
+        if($num1 || $num2 < 0){
+            logger()->warning('Negativo');
+            return 'Não fazemos multiplicação com numeros negativos !!!';
+        }else{
+            $mult = $num1 * $num2;
+            return $mult;
+        }
+    }
+
 }
