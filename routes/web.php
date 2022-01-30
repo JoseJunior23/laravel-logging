@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SubController;
 use App\Http\Controllers\SomaController;
+use App\Http\Controllers\ExercicioController;
 
 Route::get('/', function () {
     logger()->debug('Alguém acessou o site');
@@ -10,6 +11,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/soma/{num1}/{num2}', [SomaController::class ,'soma']);
+Route::get('/soma/{num1}/{num2}', [ExercicioController::class ,'soma']);
 
-Route::get('/sub/{num1}/{num2}',[SubController::class, 'sub']);
+Route::get('/sub/{num1}/{num2}',[ExercicioController::class, 'sub']);
+
+Route::get('/div/{num1}/{num2}',[ExercicioController::class, 'divError']);
